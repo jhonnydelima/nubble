@@ -2,20 +2,55 @@ import { Text as RNText, TextProps as RNTextProps, TextStyle } from 'react-nativ
 
 interface TextProps extends RNTextProps {
   variant?: TextVariants;
-  style?: Omit<TextStyle, 'fontSize' | 'lineHeight'>;
+  bold?: boolean;
+  semiBold?: boolean;
+  italic?: boolean;
+  style?: Omit<TextStyle, 'fontSize' | 'lineHeight' | 'fontFamily' | 'fontWeight' | 'fontStyle'>;
 }
 
 export function Text({
   children,
   variant = 'paragraphMedium',
+  bold,
+  semiBold,
+  italic,
   style,
   ...rest
 }: TextProps) {
+  const fontFamily = getFontFamily(variant, bold, semiBold, italic);
   return (
-    <RNText style={[$fontSizes[variant], style]} {...rest}>
+    <RNText
+      style={[$fontSizes[variant], {fontFamily}, style]}
+      {...rest}
+    >
       {children}
     </RNText>
   );
+}
+
+function getFontFamily(
+  variant: TextVariants,
+  bold?: boolean,
+  semiBold?: boolean,
+  italic?: boolean
+) {
+  if (variant === 'headingLarge' || variant === 'headingMedium' || variant === 'headingSmall') {
+    return italic ? $fontFamilies.blackItalic : $fontFamilies.black;
+  }
+  switch (true) {
+    case bold && italic:
+      return $fontFamilies.boldItalic;
+    case bold:
+      return $fontFamilies.bold;
+    case semiBold && italic:
+      return $fontFamilies.mediumItalic;
+    case semiBold:
+      return $fontFamilies.medium;
+    case italic:
+      return $fontFamilies.italic;
+    default:
+      return $fontFamilies.regular;
+  }
 }
 
 type TextVariants =
@@ -41,6 +76,7 @@ const $fontSizes: Record<TextVariants, TextStyle> = {
 
 const $fontFamilies = {
   'black': 'Satoshi-Black',
+  'blackItalic': 'Satoshi-BlackItalic',
   'bold': 'Satoshi-Bold',
   'boldItalic': 'Satoshi-BoldItalic',
   'medium': 'Satoshi-Medium',

@@ -48,6 +48,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Satoshi-Black.otf</string>
+		<string>Satoshi-BlackItalic.otf</string>
 		<string>Satoshi-Bold.otf</string>
 		<string>Satoshi-BoldItalic.otf</string>
 		<string>Satoshi-Italic.otf</string>
