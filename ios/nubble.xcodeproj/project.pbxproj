@@ -14,6 +14,9 @@
 		4EDDE7842D8E48F5003C5479 /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDE77A2D8E48F5003C5479 /* Satoshi-Regular.otf */; };
 		4EDDE7862D8E48F5003C5479 /* Satoshi-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDE77C2D8E48F5003C5479 /* Satoshi-Medium.otf */; };
 		4EDDE7882D8E48F5003C5479 /* Satoshi-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDE77E2D8E48F5003C5479 /* Satoshi-Black.otf */; };
+		4EDDE78C2D8E584B003C5479 /* Satoshi-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDE78B2D8E584B003C5479 /* Satoshi-BoldItalic.otf */; };
+		4EDDE78E2D8E5855003C5479 /* Satoshi-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDE78D2D8E5855003C5479 /* Satoshi-Italic.otf */; };
+		4EDDE7902D8E5863003C5479 /* Satoshi-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDDE78F2D8E5863003C5479 /* Satoshi-MediumItalic.otf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FB52EB4C2A4AFDB794DEB4A4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
@@ -30,6 +33,9 @@
 		4EDDE77A2D8E48F5003C5479 /* Satoshi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Regular.otf"; sourceTree = "<group>"; };
 		4EDDE77C2D8E48F5003C5479 /* Satoshi-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Medium.otf"; sourceTree = "<group>"; };
 		4EDDE77E2D8E48F5003C5479 /* Satoshi-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Black.otf"; sourceTree = "<group>"; };
+		4EDDE78B2D8E584B003C5479 /* Satoshi-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-BoldItalic.otf"; sourceTree = "<group>"; };
+		4EDDE78D2D8E5855003C5479 /* Satoshi-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Italic.otf"; sourceTree = "<group>"; };
+		4EDDE78F2D8E5863003C5479 /* Satoshi-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-MediumItalic.otf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-nubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nubble.release.xcconfig"; path = "Target Support Files/Pods-nubble/Pods-nubble.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-nubble.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nubble.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = nubble/AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 		4EDDE7742D8E399E003C5479 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4EDDE78B2D8E584B003C5479 /* Satoshi-BoldItalic.otf */,
+				4EDDE78D2D8E5855003C5479 /* Satoshi-Italic.otf */,
+				4EDDE78F2D8E5863003C5479 /* Satoshi-MediumItalic.otf */,
 				4EDDE77E2D8E48F5003C5479 /* Satoshi-Black.otf */,
 				4EDDE7772D8E48F4003C5479 /* Satoshi-Bold.otf */,
 				4EDDE7792D8E48F5003C5479 /* Satoshi-Light.otf */,
@@ -183,6 +192,9 @@
 			files = (
 				4EDDE7832D8E48F5003C5479 /* Satoshi-Light.otf in Resources */,
 				4EDDE7882D8E48F5003C5479 /* Satoshi-Black.otf in Resources */,
+				4EDDE78C2D8E584B003C5479 /* Satoshi-BoldItalic.otf in Resources */,
+				4EDDE78E2D8E5855003C5479 /* Satoshi-Italic.otf in Resources */,
+				4EDDE7902D8E5863003C5479 /* Satoshi-MediumItalic.otf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				4EDDE7862D8E48F5003C5479 /* Satoshi-Medium.otf in Resources */,

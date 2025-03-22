@@ -6,7 +6,7 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView>
       <Text style={{color: 'red'}}>React Native</Text>
-      <Text variant="headingLarge" style={{fontFamily: 'Satoshi-Black'}}>React Native</Text>
+      <Text variant="headingLarge" style={{fontFamily: 'Satoshi-Italic'}}>React Native</Text>
     </SafeAreaView>
   );
 }
