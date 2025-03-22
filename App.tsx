@@ -5,7 +5,8 @@ import { Text } from './src/components/Text/Text';
 function App(): React.JSX.Element {
   return (
     <SafeAreaView>
-      <Text variant="headingLarge" style={{color: 'red'}}>React Native</Text>
+      <Text style={{color: 'red'}}>React Native</Text>
+      <Text variant="headingLarge" style={{fontFamily: 'Satoshi-Black'}}>React Native</Text>
     </SafeAreaView>
   );
 }
