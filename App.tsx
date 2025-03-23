@@ -10,11 +10,13 @@ function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaView>
-        <Text preset="headingLarge" fontStyle="italic">React Native</Text>
-        <Box marginBottom="s20">
-          <Button title="Entrar" />
+        <Box paddingHorizontal="s24" gap="s12">
+          <Text preset="headingLarge" fontStyle="italic">React Native</Text>
+          <Button title="Primary" />
+          <Button title="Primary Loading" />
+          <Button title="Outline" preset="outline" />
+          <Button title="Outline Loading" preset="outline" loading />
         </Box>
-        <Button title="Sair" loading />
       </SafeAreaView>
     </ThemeProvider>
   );
