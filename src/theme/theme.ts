@@ -50,7 +50,14 @@ export const theme = createTheme({
     s48: 48,
     s56: 56,
   },
-  borderRadii: {},
+  borderRadii: {
+    s8: 8,
+    s12: 12,
+    s16: 16,
+  },
+  textVariants: {
+    defaults: {},
+  },
 });
 
 export type Theme = typeof theme;
