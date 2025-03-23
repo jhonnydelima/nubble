@@ -13,7 +13,7 @@ function App(): React.JSX.Element {
         <Box paddingHorizontal="s24" gap="s12">
           <Text preset="headingLarge" fontStyle="italic">React Native</Text>
           <Button title="Primary" />
-          <Button title="Primary Loading" />
+          <Button title="Primary Loading" loading />
           <Button title="Outline" preset="outline" />
           <Button title="Outline Loading" preset="outline" loading />
         </Box>
