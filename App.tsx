@@ -22,8 +22,8 @@ function App(): React.JSX.Element {
           <Button title="Outline Loading" preset="outline" loading />
           <Button title="Outline Disabled" preset="outline" disabled />
           <Box flexDirection="row" justifyContent="space-between">
-            <Icon name="eyeOn" />
-            <Icon name="eyeOff" />
+            <Icon name="eyeOn" color="carrotSecondary" size={40} />
+            <Icon name="eyeOff" color="error" size={50} />
           </Box>
         </Box>
       </SafeAreaView>
