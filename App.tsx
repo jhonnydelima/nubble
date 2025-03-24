@@ -21,9 +21,23 @@ function App(): React.JSX.Element {
           <Button title="Outline" preset="outline" />
           <Button title="Outline Loading" preset="outline" loading />
           <Button title="Outline Disabled" preset="outline" disabled />
-          <Box flexDirection="row" justifyContent="space-between">
+          <Box flexDirection="row">
             <Icon name="eyeOn" color="carrotSecondary" size={40} />
             <Icon name="eyeOff" color="error" size={50} />
+            <Icon name="chevronRight" size={50} />
+            <Icon name="heartFill" color="buttonPrimary" />
+            <Icon name="profile" size={50} />
+            <Icon name="profileFill" size={50} />
+            <Icon name="heart" size={50} />
+          </Box>
+          <Box flexDirection="row">
+            <Icon name="bellOn" color="carrotSecondary" size={50} />
+            <Icon name="newPost" size={50} />
+            <Icon name="camera" size={50} />
+            <Icon name="chat" size={50} />
+            <Icon name="chatOn" color="error" size={50} />
+            <Icon name="flashOff" size={50} />
+            <Icon name="flashOn" size={50} />
           </Box>
         </Box>
       </SafeAreaView>
