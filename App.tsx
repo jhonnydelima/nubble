@@ -1,44 +1,41 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, TextInput } from 'react-native';
 import { Text } from './src/components/Text/Text';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
-import { Button } from './src/components/Button/Button';
 import { Box } from './src/components/Box/Box';
-import { Icon } from './src/components/Icon/Icon';
+import { Button } from './src/components/Button/Button';
 
 function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaView>
-        <Box paddingHorizontal="s24" gap="s12">
-          <Text preset="headingLarge">Heading Large</Text>
-          <Text preset="paragraphMedium">Paragraph Medium</Text>
-          <Text preset="paragraphCaption">Paragraph Caption</Text>
-          <Button title="Primary" />
-          <Button title="Primary Loading" loading />
-          <Button title="Primary Disabled" disabled />
-          <Button title="Outline" preset="outline" />
-          <Button title="Outline Loading" preset="outline" loading />
-          <Button title="Outline Disabled" preset="outline" disabled />
-          <Box flexDirection="row">
-            <Icon name="eyeOn" color="carrotSecondary" size={40} />
-            <Icon name="eyeOff" color="error" size={50} />
-            <Icon name="chevronRight" size={50} />
-            <Icon name="heartFill" color="buttonPrimary" />
-            <Icon name="profile" size={50} />
-            <Icon name="profileFill" size={50} />
-            <Icon name="heart" size={50} />
+        <Box px="s24">
+          <Text preset="headingLarge" mb="s8">Olá</Text>
+          <Text preset="paragraphLarge" mb="s40">
+            Digite seu e-mail e senha para entrar
+          </Text>
+
+          <Box mb="s20">
+            <TextInput
+              placeholder="Digite seu e-mail"
+              style={{borderWidth: 1, height: 50 }}
+            />
           </Box>
-          <Box flexDirection="row">
-            <Icon name="bellOn" color="carrotSecondary" size={50} />
-            <Icon name="newPost" size={50} />
-            <Icon name="camera" size={50} />
-            <Icon name="chat" size={50} />
-            <Icon name="chatOn" color="error" size={50} />
-            <Icon name="flashOff" size={50} />
-            <Icon name="flashOn" size={50} />
+
+          <Box mb="s20">
+            <TextInput
+              placeholder="Digite sua senha"
+              style={{borderWidth: 1, height: 50 }}
+            />
           </Box>
+
+          <Text preset="paragraphSmall" color="primary" mt="s10" bold>
+            Esqueci minha senha
+          </Text>
+
+          <Button mt="s48" title="Entrar" />
+          <Button preset="outline" mt="s12" title="Criar uma conta" />
         </Box>
       </SafeAreaView>
     </ThemeProvider>
