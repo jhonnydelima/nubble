@@ -1,10 +1,11 @@
 import React from 'react';
-import { SafeAreaView, TextInput } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { Text } from './src/components/Text/Text';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
 import { Box } from './src/components/Box/Box';
 import { Button } from './src/components/Button/Button';
+import { TextInput } from './src/components/TextInput/TextInput';
 
 function App(): React.JSX.Element {
   return (
@@ -17,17 +18,11 @@ function App(): React.JSX.Element {
           </Text>
 
           <Box mb="s20">
-            <TextInput
-              placeholder="Digite seu e-mail"
-              style={{borderWidth: 1, height: 50 }}
-            />
+            <TextInput label="E-mail" placeholder="Digite seu e-mail" />
           </Box>
 
-          <Box mb="s20">
-            <TextInput
-              placeholder="Digite sua senha"
-              style={{borderWidth: 1, height: 50 }}
-            />
+          <Box>
+            <TextInput label="Senha" placeholder="Digite sua senha" />
           </Box>
 
           <Text preset="paragraphSmall" color="primary" mt="s10" bold>
