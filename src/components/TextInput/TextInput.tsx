@@ -1,19 +1,25 @@
-import { TextInput as RNTextInput, TextInputProps } from 'react-native';
+import { TextInput as RNTextInput, TextInputProps, TextStyle } from 'react-native';
 import { Box, BoxProps } from '../Box/Box';
-import { Text } from '../Text/Text';
+import { $fontFamilies, $fontSizes, Text } from '../Text/Text';
+import { useAppTheme } from '../../hooks/useAppTheme';
 
 interface Props extends TextInputProps {
   label: string;
 }
 
 export function TextInput({ label, ...textInputProps }: Props) {
+  const { colors } = useAppTheme();
   return (
     <Box gap="s4">
       <Text preset="paragraphMedium" semiBold>
         {label}
       </Text>
       <Box {...$textInputContainer}>
-        <RNTextInput style={{borderWidth: 1, height: 50 }} {...textInputProps} />
+        <RNTextInput
+          placeholderTextColor={colors.gray2}
+          style={$textInputStyle}
+          {...textInputProps}
+        />
       </Box>
     </Box>
   );
@@ -24,4 +30,11 @@ const $textInputContainer: BoxProps = {
   p: 's16',
   borderColor: 'gray4',
   borderRadius: 's12',
+};
+
+const $textInputStyle: TextStyle = {
+  borderWidth: 1,
+  padding: 0,
+  fontFamily: $fontFamilies.regular,
+  ...$fontSizes.paragraphMedium,
 };
