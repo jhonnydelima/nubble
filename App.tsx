@@ -18,7 +18,7 @@ function App(): React.JSX.Element {
           </Text>
 
           <Box mb="s20">
-            <TextInput label="E-mail" placeholder="Digite seu e-mail" />
+            <TextInput label="E-mail" placeholder="Digite seu e-mail" errorMessage="mensagem de erro" />
           </Box>
 
           <Box>

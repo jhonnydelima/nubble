@@ -6,11 +6,19 @@ import { useRef } from 'react';
 
 interface Props extends TextInputProps {
   label: string;
+  errorMessage?: string;
 }
 
-export function TextInput({ label, ...textInputProps }: Props) {
+export function TextInput({ label, errorMessage, ...textInputProps }: Props) {
   const { colors } = useAppTheme();
   const inputRef = useRef<RNTextInput>(null);
+
+  const $textInputContainer: BoxProps = {
+    borderWidth: errorMessage ? 2 : 1,
+    p: 's16',
+    borderColor: errorMessage ? 'error' : 'gray4',
+    borderRadius: 's12',
+  };
 
   function focusInput() {
     inputRef.current?.focus();
@@ -30,17 +38,15 @@ export function TextInput({ label, ...textInputProps }: Props) {
             {...textInputProps}
           />
         </Box>
+        {errorMessage && (
+          <Text color="error" preset="paragraphSmall">
+            {errorMessage}
+          </Text>
+        )}
       </Box>
     </Pressable>
   );
 }
-
-const $textInputContainer: BoxProps = {
-  borderWidth: 1,
-  p: 's16',
-  borderColor: 'gray4',
-  borderRadius: 's12',
-};
 
 const $textInputStyle: TextStyle = {
   padding: 0,
