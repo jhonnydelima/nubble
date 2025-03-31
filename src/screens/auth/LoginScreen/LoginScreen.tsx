@@ -1,12 +1,12 @@
-import {Icon} from '../../../components/Icon/Icon';
 import {Text} from '../../../components/Text/Text';
 import {TextInput} from '../../../components/TextInput/TextInput';
 import {Button} from '../../../components/Button/Button';
 import {Screen} from '../../../components/Screen/Screen';
+import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 
 export function LoginScreen() {
   return (
-    <Screen>
+    <Screen scrollable>
       <Text preset="headingLarge" mb="s8">
         Olá
       </Text>
@@ -21,10 +21,9 @@ export function LoginScreen() {
         boxProps={{mb: 's20'}}
       />
 
-      <TextInput
+      <PasswordInput
         label="Senha"
         placeholder="Digite sua senha"
-        RightComponent={<Icon name="eyeOn" color="gray2" />}
         boxProps={{mb: 's10'}}
       />
 
