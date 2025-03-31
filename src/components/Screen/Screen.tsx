@@ -15,13 +15,18 @@ export function Screen({ children, canGoBack = false, scrollable = false }: Scre
   const { top, bottom } = useAppSafeArea();
   const { colors } = useAppTheme();
   const Container = scrollable ? ScrollView : Box;
+
   return (
-    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      style={{ flex: 1 }}
+    >
       <Container
         style={{
           backgroundColor: colors.background,
-          height: '100%',
+          flex: 1,
         }}
+        keyboardShouldPersistTaps="handled"
       >
         <Box px="s24" style={{paddingTop: top, paddingBottom: bottom}}>
           {canGoBack && (
