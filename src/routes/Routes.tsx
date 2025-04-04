@@ -11,6 +11,7 @@ export function Router() {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          fullScreenGestureEnabled: true,
         }}
         initialRouteName="LoginScreen"
       >

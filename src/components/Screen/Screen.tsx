@@ -1,9 +1,10 @@
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { useAppSafeArea } from '../../hooks/useAppSafeArea';
-import { Box } from '../Box/Box';
+import { Box, TouchableOpacityBox } from '../Box/Box';
 import { Icon } from '../Icon/Icon';
 import { Text } from '../Text/Text';
 import { useAppTheme } from '../../hooks/useAppTheme';
+import { useNavigation } from '@react-navigation/native';
 
 interface ScreenProps {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ interface ScreenProps {
 export function Screen({ children, canGoBack = false, scrollable = false }: ScreenProps) {
   const { top, bottom } = useAppSafeArea();
   const { colors } = useAppTheme();
+  const navigation = useNavigation();
   const Container = scrollable ? ScrollView : Box;
 
   return (
@@ -28,7 +30,11 @@ export function Screen({ children, canGoBack = false, scrollable = false }: Scre
         }}
         keyboardShouldPersistTaps="handled"
       >
-        <Box px="s24" style={{paddingTop: top, paddingBottom: bottom}}>
+        <TouchableOpacityBox
+          onPress={navigation.goBack}
+          px="s24"
+          style={{paddingTop: top, paddingBottom: bottom}}
+        >
           {canGoBack && (
             <Box flexDirection="row" mb="s24" alignItems="center">
               <Icon name="arrowLeft" color="primary" />
@@ -38,7 +44,7 @@ export function Screen({ children, canGoBack = false, scrollable = false }: Scre
             </Box>
           )}
           {children}
-        </Box>
+        </TouchableOpacityBox>
       </Container>
     </KeyboardAvoidingView>
   );
