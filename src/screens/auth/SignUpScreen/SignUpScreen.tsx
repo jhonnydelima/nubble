@@ -8,9 +8,9 @@ import { RootStackParamList } from '../../../routes/Routes';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
 
-export function SignUpScreen(props: ScreenProps) {
+export function SignUpScreen({ navigation }: ScreenProps) {
   function submitForm() {
-    // TODO: Implementar a lógica de criação de conta
+    navigation.navigate('SuccessScreen');
   }
 
   return (
