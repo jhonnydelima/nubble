@@ -10,7 +10,7 @@ export function SuccessScreen() {
 
   return (
     <Screen>
-      <Icon name="bookmark" />
+      <Icon name="checkRound" color="success" />
       <Text preset="headingLarge" mt="s24">Title</Text>
       <Text preset="paragraphLarge" mt="s16">description</Text>
       <Button onPress={goBackToLogin} title="Voltar ao início" mt="s40" />

@@ -28,6 +28,10 @@ import { SettingsIcon } from '../../assets/icons/SettingsIcon';
 import { TrashIcon } from '../../assets/icons/TrashIcon';
 import { useAppTheme } from '../../hooks/useAppTheme';
 import { ThemeColors } from '../../theme/theme';
+import { CheckRoundIcon } from '../../assets/icons/CheckRoundIcon';
+import { ErrorRoundIcon } from '../../assets/icons/ErrorRoundIcon';
+import { MessageRoundIcon } from '../../assets/icons/MessageRoundIcon';
+import { MessageRoundLightIcon } from '../../assets/icons/MessageRoundLightIcon';
 
 export interface BaseIcon {
   size?: number;
@@ -72,8 +76,10 @@ const iconRegistry = {
   chat: ChatIcon,
   chatOn: ChatOnIcon,
   check: CheckIcon,
+  checkRound: CheckRoundIcon,
   comment: CommentIcon,
   chevronRight: ChevronRightIcon,
+  errorRound: ErrorRoundIcon,
   eyeOn: EyeOnIcon,
   eyeOff: EyeOffIcon,
   flashOn: FlashOnIcon,
@@ -83,6 +89,8 @@ const iconRegistry = {
   home: HomeIcon,
   homeFill: HomeFillIcon,
   message: MessageIcon,
+  messageRound: MessageRoundIcon,
+  messageRoundLight: MessageRoundLightIcon,
   newPost: NewPostIcon,
   profile: ProfileIcon,
   profileFill: ProfileFillIcon,
