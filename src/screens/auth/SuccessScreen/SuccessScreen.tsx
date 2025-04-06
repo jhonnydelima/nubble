@@ -11,7 +11,7 @@ export function SuccessScreen({ route, navigation }: ScreenProps) {
   const { title, description, icon } = route.params;
 
   function goBackToLogin() {
-    navigation.popToTop();
+    navigation.goBack();
   }
 
   return (
