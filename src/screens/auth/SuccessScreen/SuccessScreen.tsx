@@ -11,7 +11,9 @@ export function SuccessScreen({ route, navigation }: ScreenProps) {
   const { title, description, icon } = route.params;
 
   function goBackToLogin() {
-    navigation.goBack();
+    if (navigation.canGoBack()) {
+      navigation.goBack();
+    }
   }
 
   return (
