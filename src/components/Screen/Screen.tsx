@@ -18,6 +18,12 @@ export function Screen({ children, canGoBack = false, scrollable = false }: Scre
   const navigation = useNavigation();
   const Container = scrollable ? ScrollView : Box;
 
+  function handleGoBack() {
+    if (navigation.canGoBack()) {
+      navigation.goBack();
+    }
+  }
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -31,7 +37,7 @@ export function Screen({ children, canGoBack = false, scrollable = false }: Scre
         keyboardShouldPersistTaps="handled"
       >
         <TouchableOpacityBox
-          onPress={navigation.goBack}
+          onPress={handleGoBack}
           px="s24"
           style={{paddingTop: top, paddingBottom: bottom}}
         >
