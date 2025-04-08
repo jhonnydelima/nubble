@@ -23,12 +23,6 @@ export function Screen({
   const navigation = useNavigation();
   const Container = scrollable ? ScrollViewContainer : ViewContainer;
 
-  function handleGoBack() {
-    if (navigation.canGoBack()) {
-      navigation.goBack();
-    }
-  }
-
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -37,7 +31,7 @@ export function Screen({
         <Box px="s24" style={{paddingTop: top, paddingBottom: bottom}}>
           {canGoBack && (
             <TouchableOpacityBox
-              onPress={handleGoBack}
+              onPress={navigation.goBack}
               flexDirection="row"
               mb="s24"
               alignItems="center"
