@@ -1,10 +1,10 @@
 import { Button } from '../../../components/Button/Button';
+import { FormPasswordInput } from '../../../components/Form/FormPasswordInput';
 import { FormTextInput } from '../../../components/Form/FormTextInput';
-import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 import { Screen } from '../../../components/Screen/Screen';
 import { Text } from '../../../components/Text/Text';
 import { useResetNavigationSuccess } from '../../../hooks/useResetNavigationSuccess';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 type SignUpFormType = {
   username: string;
@@ -64,6 +64,7 @@ export function SignUpScreen() {
         rules={{required: 'Nome obrigatório'}}
         label="Nome completo"
         placeholder="Digite seu nome completo"
+        autoCapitalize="words"
         boxProps={{ mb: 's20' }}
       />
 
@@ -82,7 +83,7 @@ export function SignUpScreen() {
         boxProps={{ mb: 's20' }}
       />
 
-      <Controller
+      <FormPasswordInput
         control={control}
         name="password"
         rules={{
@@ -92,16 +93,9 @@ export function SignUpScreen() {
             message: 'Senha deve ter no mínimo 8 caracteres',
           },
         }}
-        render={({ field, fieldState }) => (
-          <PasswordInput
-            value={field.value}
-            onChangeText={field.onChange}
-            errorMessage={fieldState.error?.message}
-            label="Senha"
-            placeholder="Digite sua senha"
-            boxProps={{ mb: 's48' }}
-          />
-        )}
+        label="Senha"
+        placeholder="Digite sua senha"
+        boxProps={{ mb: 's48' }}
       />
 
       <Button
