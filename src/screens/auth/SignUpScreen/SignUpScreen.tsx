@@ -1,8 +1,8 @@
 import { Button } from '../../../components/Button/Button';
+import { FormTextInput } from '../../../components/Form/FormTextInput';
 import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 import { Screen } from '../../../components/Screen/Screen';
 import { Text } from '../../../components/Text/Text';
-import { TextInput } from '../../../components/TextInput/TextInput';
 import { useResetNavigationSuccess } from '../../../hooks/useResetNavigationSuccess';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -43,7 +43,7 @@ export function SignUpScreen() {
         Criar uma conta
       </Text>
 
-      <Controller
+      <FormTextInput
         control={control}
         name="username"
         rules={{
@@ -53,35 +53,21 @@ export function SignUpScreen() {
             message: 'Username inválido',
           },
         }}
-        render={({ field, fieldState }) => (
-          <TextInput
-            value={field.value}
-            onChangeText={field.onChange}
-            errorMessage={fieldState.error?.message}
-            label="Seu username"
-            placeholder="@"
-            boxProps={{ mb: 's20' }}
-          />
-        )}
+        label="Seu username"
+        placeholder="@"
+        boxProps={{ mb: 's20' }}
       />
 
-      <Controller
+      <FormTextInput
         control={control}
         name="fullName"
         rules={{required: 'Nome obrigatório'}}
-        render={({ field, fieldState }) => (
-          <TextInput
-            value={field.value}
-            onChangeText={field.onChange}
-            errorMessage={fieldState.error?.message}
-            label="Nome completo"
-            placeholder="Digite seu nome completo"
-            boxProps={{ mb: 's20' }}
-          />
-        )}
+        label="Nome completo"
+        placeholder="Digite seu nome completo"
+        boxProps={{ mb: 's20' }}
       />
 
-      <Controller
+      <FormTextInput
         control={control}
         name="email"
         rules={{
@@ -91,16 +77,9 @@ export function SignUpScreen() {
             message: 'E-mail inválido',
           },
         }}
-        render={({ field, fieldState }) => (
-          <TextInput
-            value={field.value}
-            onChangeText={field.onChange}
-            errorMessage={fieldState.error?.message}
-            label="E-mail"
-            placeholder="Digite seu e-mail"
-            boxProps={{ mb: 's20' }}
-          />
-        )}
+        label="E-mail"
+        placeholder="Digite seu e-mail"
+        boxProps={{ mb: 's20' }}
       />
 
       <Controller
