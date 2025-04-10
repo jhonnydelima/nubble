@@ -14,6 +14,7 @@ export function FormTextInput<FormType extends FieldValues>({
       rules={rules}
       render={({field, fieldState}) => (
         <TextInput
+          autoCapitalize="none"
           value={field.value}
           onChangeText={field.onChange}
           errorMessage={fieldState.error?.message}
