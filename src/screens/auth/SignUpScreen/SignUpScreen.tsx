@@ -5,16 +5,12 @@ import { Screen } from '../../../components/Screen/Screen';
 import { Text } from '../../../components/Text/Text';
 import { useResetNavigationSuccess } from '../../../hooks/useResetNavigationSuccess';
 import { useForm } from 'react-hook-form';
-
-type SignUpFormType = {
-  username: string;
-  fullName: string;
-  email: string;
-  password: string;
-}
+import { signUpFormSchema, SignUpFormType } from './signUpFormSchema';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 export function SignUpScreen() {
   const { control, formState, handleSubmit } = useForm<SignUpFormType>({
+    resolver: zodResolver(signUpFormSchema),
     defaultValues: {
       username: '',
       fullName: '',
@@ -46,13 +42,6 @@ export function SignUpScreen() {
       <FormTextInput
         control={control}
         name="username"
-        rules={{
-          required: 'Username obrigatório',
-          pattern: {
-            value: /^[a-zA-Z0-9._-]+$/,
-            message: 'Username inválido',
-          },
-        }}
         label="Seu username"
         placeholder="@"
         boxProps={{ mb: 's20' }}
@@ -61,7 +50,6 @@ export function SignUpScreen() {
       <FormTextInput
         control={control}
         name="fullName"
-        rules={{required: 'Nome obrigatório'}}
         label="Nome completo"
         placeholder="Digite seu nome completo"
         autoCapitalize="words"
@@ -71,13 +59,6 @@ export function SignUpScreen() {
       <FormTextInput
         control={control}
         name="email"
-        rules={{
-          required: 'E-mail é obrigatório',
-          pattern: {
-            value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-            message: 'E-mail inválido',
-          },
-        }}
         label="E-mail"
         placeholder="Digite seu e-mail"
         boxProps={{ mb: 's20' }}
@@ -86,13 +67,6 @@ export function SignUpScreen() {
       <FormPasswordInput
         control={control}
         name="password"
-        rules={{
-          required: 'Senha é obrigatória',
-          minLength: {
-            value: 8,
-            message: 'Senha deve ter no mínimo 8 caracteres',
-          },
-        }}
         label="Senha"
         placeholder="Digite sua senha"
         boxProps={{ mb: 's48' }}
