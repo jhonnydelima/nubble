@@ -5,7 +5,7 @@ import {Theme} from '../../theme/theme';
 const SRText = createText<Theme>();
 interface SRTextProps extends React.ComponentProps<typeof SRText> {}
 
-interface TextProps
+export interface TextProps
   extends Omit<
     SRTextProps,
     'fontWeight' | 'fontSize' | 'fontFamily' | 'lineHeight' | 'style'

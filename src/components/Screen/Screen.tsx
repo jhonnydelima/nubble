@@ -7,7 +7,7 @@ import {useAppTheme} from '../../hooks/useAppTheme';
 import {useNavigation} from '@react-navigation/native';
 import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
 
-interface ScreenProps {
+export interface ScreenProps {
   children: React.ReactNode;
   canGoBack?: boolean;
   scrollable?: boolean;

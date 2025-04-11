@@ -3,7 +3,7 @@ import {TouchableOpacityBox, TouchableOpacityBoxProps} from '../Box/Box';
 import {Text} from '../Text/Text';
 import { ButtonPreset, buttonPresets } from './buttonPresets';
 
-interface ButtonProps extends TouchableOpacityBoxProps {
+export interface ButtonProps extends TouchableOpacityBoxProps {
   preset?: ButtonPreset;
   title: string;
   loading?: boolean;
