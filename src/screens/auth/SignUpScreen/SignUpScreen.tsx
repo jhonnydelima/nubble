@@ -1,3 +1,6 @@
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+
 import {
   Text,
   Button,
@@ -6,9 +9,9 @@ import {
   FormTextInput,
 } from '@components';
 import { useResetNavigationSuccess } from '@hooks';
-import { useForm } from 'react-hook-form';
+
 import { signUpFormSchema, SignUpFormType } from './signUpFormSchema';
-import { zodResolver } from '@hookform/resolvers/zod';
+
 
 export function SignUpScreen() {
   const { control, formState, handleSubmit } = useForm<SignUpFormType>({

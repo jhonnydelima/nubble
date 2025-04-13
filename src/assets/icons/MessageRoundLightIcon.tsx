@@ -1,7 +1,9 @@
 import React from 'react';
+
 import {Svg, Path, Circle} from 'react-native-svg';
-import {BaseIcon} from '../../components/Icon/Icon';
-import { palette } from '../../theme/theme';
+
+import {BaseIcon} from '@components';
+import { palette } from '@theme';
 
 export function MessageRoundLightIcon({size = 48, color = palette.greenPrimaryLight}: BaseIcon) {
   return (

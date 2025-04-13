@@ -1,6 +1,5 @@
 import { Pressable } from 'react-native';
-import { useAppTheme } from '@hooks';
-import { ThemeColors } from '@theme';
+
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -34,6 +33,9 @@ import {
   SettingsIcon,
   TrashIcon,
 } from '@icons';
+
+import { useAppTheme } from '@hooks';
+import { ThemeColors } from '@theme';
 
 export interface BaseIcon {
   size?: number;
