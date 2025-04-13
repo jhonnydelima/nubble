@@ -3,9 +3,12 @@ import React from 'react';
 import {Svg, Path, Circle} from 'react-native-svg';
 
 import {BaseIcon} from '@components';
-import { palette } from '@theme';
+import {palette} from '@theme';
 
-export function CheckRoundIcon({size = 48, color = palette.greenSuccess}: BaseIcon) {
+export function CheckRoundIcon({
+  size = 48,
+  color = palette.greenSuccess,
+}: BaseIcon) {
   return (
     <Svg width={size} height={size} viewBox="0 0 48 48" fill="none">
       <Circle cx="24" cy="24" r="24" fill={color} />
@@ -18,4 +21,3 @@ export function CheckRoundIcon({size = 48, color = palette.greenSuccess}: BaseIc
     </Svg>
   );
 }
-

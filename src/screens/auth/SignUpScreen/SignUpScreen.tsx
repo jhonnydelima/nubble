@@ -1,5 +1,5 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {useForm} from 'react-hook-form';
 
 import {
   Text,
@@ -8,13 +8,12 @@ import {
   FormPasswordInput,
   FormTextInput,
 } from '@components';
-import { useResetNavigationSuccess } from '@hooks';
+import {useResetNavigationSuccess} from '@hooks';
 
-import { signUpFormSchema, SignUpFormType } from './signUpFormSchema';
-
+import {signUpFormSchema, SignUpFormType} from './signUpFormSchema';
 
 export function SignUpScreen() {
-  const { control, formState, handleSubmit } = useForm<SignUpFormType>({
+  const {control, formState, handleSubmit} = useForm<SignUpFormType>({
     resolver: zodResolver(signUpFormSchema),
     defaultValues: {
       username: '',
@@ -24,7 +23,7 @@ export function SignUpScreen() {
     },
     mode: 'onChange',
   });
-  const { reset } = useResetNavigationSuccess();
+  const {reset} = useResetNavigationSuccess();
 
   function submitForm(formData: SignUpFormType) {
     console.log('Form Submitted', formData);
@@ -50,7 +49,7 @@ export function SignUpScreen() {
         name="username"
         label="Seu username"
         placeholder="@"
-        boxProps={{ mb: 's20' }}
+        boxProps={{mb: 's20'}}
       />
 
       <FormTextInput
@@ -59,7 +58,7 @@ export function SignUpScreen() {
         label="Nome completo"
         placeholder="Digite seu nome completo"
         autoCapitalize="words"
-        boxProps={{ mb: 's20' }}
+        boxProps={{mb: 's20'}}
       />
 
       <FormTextInput
@@ -67,7 +66,7 @@ export function SignUpScreen() {
         name="email"
         label="E-mail"
         placeholder="Digite seu e-mail"
-        boxProps={{ mb: 's20' }}
+        boxProps={{mb: 's20'}}
       />
 
       <FormPasswordInput
@@ -75,7 +74,7 @@ export function SignUpScreen() {
         name="password"
         label="Senha"
         placeholder="Digite sua senha"
-        boxProps={{ mb: 's48' }}
+        boxProps={{mb: 's48'}}
       />
 
       <Button

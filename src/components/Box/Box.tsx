@@ -28,7 +28,10 @@ export interface TouchableOpacityBoxProps
     LayoutProps<Theme>,
     BorderProps<Theme> {}
 
-export const TouchableOpacityBox = createRestyleComponent<TouchableOpacityBoxProps, Theme>(
+export const TouchableOpacityBox = createRestyleComponent<
+  TouchableOpacityBoxProps,
+  Theme
+>(
   [backgroundColor, spacing, spacingShorthand, layout, border],
   TouchableOpacity,
 );

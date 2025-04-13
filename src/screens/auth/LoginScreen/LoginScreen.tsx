@@ -1,18 +1,24 @@
-import { Alert } from 'react-native';
+import {Alert} from 'react-native';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useForm } from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {useForm} from 'react-hook-form';
 
-import { Text, Button, Screen, FormPasswordInput, FormTextInput } from '@components';
-import { RootStackParamList } from '@routes';
+import {
+  Text,
+  Button,
+  Screen,
+  FormPasswordInput,
+  FormTextInput,
+} from '@components';
+import {RootStackParamList} from '@routes';
 
-import { loginFormSchema, LoginFormType } from './loginFormSchema';
+import {loginFormSchema, LoginFormType} from './loginFormSchema';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
 
 export function LoginScreen({navigation}: ScreenProps) {
-  const { control, formState, handleSubmit } = useForm<LoginFormType>({
+  const {control, formState, handleSubmit} = useForm<LoginFormType>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
       email: '',
@@ -21,7 +27,7 @@ export function LoginScreen({navigation}: ScreenProps) {
     mode: 'onChange',
   });
 
-  function submitForm({ email, password }: LoginFormType) {
+  function submitForm({email, password}: LoginFormType) {
     // Handle form submission
 
     Alert.alert('Form Submitted', `Email: ${email}\nPassword: ${password}`);
@@ -64,8 +70,7 @@ export function LoginScreen({navigation}: ScreenProps) {
         onPress={navigateToForgotPasswordScreen}
         preset="paragraphSmall"
         color="primary"
-        bold
-      >
+        bold>
         Esqueci minha senha
       </Text>
 
