@@ -1,6 +1,6 @@
 import { Text, Button, Screen, FormPasswordInput, FormTextInput } from '@components';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../../routes/Routes';
+import { RootStackParamList } from '@routes';
 import { useForm } from 'react-hook-form';
 import { Alert } from 'react-native';
 import { loginFormSchema, LoginFormType } from './loginFormSchema';

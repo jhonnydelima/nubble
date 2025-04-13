@@ -1,6 +1,4 @@
-import { ActivityIndicator } from '../ActivityIndicator/ActivityIndicator';
-import {TouchableOpacityBox, TouchableOpacityBoxProps} from '../Box/Box';
-import {Text} from '../Text/Text';
+import { ActivityIndicator, TouchableOpacityBox, TouchableOpacityBoxProps, Text } from '@components';
 import { ButtonPreset, buttonPresets } from './buttonPresets';
 
 export interface ButtonProps extends TouchableOpacityBoxProps {
