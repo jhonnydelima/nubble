@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
-import { Icon, TextInput, TextInputProps } from '@components';
+import {Icon, TextInput, TextInputProps} from '@components';
 
 export type PasswordInputProps = Omit<TextInputProps, 'RightComponent'>;
 
@@ -8,7 +8,7 @@ export function PasswordInput(props: PasswordInputProps) {
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(true);
 
   function toggleSecureTextEntry() {
-    setIsSecureTextEntry((prev) => !prev);
+    setIsSecureTextEntry(prev => !prev);
   }
 
   return (

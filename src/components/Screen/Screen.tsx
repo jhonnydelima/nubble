@@ -2,8 +2,8 @@ import {KeyboardAvoidingView, Platform} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 
-import { Box, TouchableOpacityBox, Icon, Text } from '@components';
-import { useAppTheme, useAppSafeArea } from '@hooks';
+import {Box, TouchableOpacityBox, Icon, Text} from '@components';
+import {useAppTheme, useAppSafeArea} from '@hooks';
 
 import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
 
@@ -34,8 +34,7 @@ export function Screen({
               onPress={navigation.goBack}
               flexDirection="row"
               mb="s24"
-              alignItems="center"
-            >
+              alignItems="center">
               <Icon name="arrowLeft" color="primary" />
               <Text preset="paragraphMedium" bold ml="s8">
                 Voltar

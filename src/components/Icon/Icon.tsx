@@ -1,4 +1,4 @@
-import { Pressable } from 'react-native';
+import {Pressable} from 'react-native';
 
 import {
   ArrowLeftIcon,
@@ -34,8 +34,8 @@ import {
   TrashIcon,
 } from '@icons';
 
-import { useAppTheme } from '@hooks';
-import { ThemeColors } from '@theme';
+import {useAppTheme} from '@hooks';
+import {ThemeColors} from '@theme';
 
 export interface BaseIcon {
   size?: number;
@@ -55,10 +55,10 @@ export function Icon({
   size,
   onPress,
 }: IconProps) {
-  const { colors } = useAppTheme();
+  const {colors} = useAppTheme();
   const SVGIcon = iconRegistry[name];
 
-  if(onPress) {
+  if (onPress) {
     return (
       <Pressable hitSlop={10} onPress={onPress}>
         <SVGIcon color={colors[color]} size={size} />
