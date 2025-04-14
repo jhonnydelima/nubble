@@ -11,11 +11,11 @@ import {
   FormPasswordInput,
   FormTextInput,
 } from '@components';
-import {RootStackParamList} from '@routes';
+import {AuthStackParamList} from '@routes';
 
 import {loginFormSchema, LoginFormType} from './loginFormSchema';
 
-type ScreenProps = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
+type ScreenProps = NativeStackScreenProps<AuthStackParamList, 'LoginScreen'>;
 
 export function LoginScreen({navigation}: ScreenProps) {
   const {control, formState, handleSubmit} = useForm<LoginFormType>({
