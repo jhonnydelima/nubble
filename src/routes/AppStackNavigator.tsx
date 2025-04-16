@@ -9,7 +9,7 @@ export type AppStackParamList = {
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
-export function AppStack() {
+export function AppStackNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
