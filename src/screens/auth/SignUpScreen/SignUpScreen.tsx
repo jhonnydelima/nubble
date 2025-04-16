@@ -9,10 +9,12 @@ import {
   FormTextInput,
 } from '@components';
 import {useResetNavigationSuccess} from '@hooks';
+import {AuthScreenProps} from '@routes';
 
 import {signUpFormSchema, SignUpFormType} from './signUpFormSchema';
 
-export function SignUpScreen() {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function SignUpScreen({navigation}: AuthScreenProps<'SignUpScreen'>) {
   const {control, formState, handleSubmit} = useForm<SignUpFormType>({
     resolver: zodResolver(signUpFormSchema),
     defaultValues: {
