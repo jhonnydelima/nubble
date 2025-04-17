@@ -7,14 +7,14 @@ import {
   NewPostScreen,
 } from '@screens';
 
-export type AppTabBottomParamList = {
+export type AppBottomTabParamList = {
   HomeScreen: undefined;
   NewPostScreen: undefined;
   FavoritesScreen: undefined;
   MyProfileScreen: undefined;
 };
 
-const Tab = createBottomTabNavigator<AppTabBottomParamList>();
+const Tab = createBottomTabNavigator<AppBottomTabParamList>();
 
 export function AppBottomTabNavigator() {
   return (
