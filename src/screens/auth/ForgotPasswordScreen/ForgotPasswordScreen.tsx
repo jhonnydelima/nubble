@@ -3,13 +3,17 @@ import {useForm} from 'react-hook-form';
 
 import {Button, FormTextInput, Screen, Text} from '@components';
 import {useResetNavigationSuccess} from '@hooks';
+import {AuthScreenProps} from '@routes';
 
 import {
   forgotPasswordFormSchema,
   ForgotPasswordFormType,
 } from './forgotPasswordFormSchema';
 
-export function ForgotPasswordScreen() {
+export function ForgotPasswordScreen({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  navigation,
+}: AuthScreenProps<'ForgotPasswordScreen'>) {
   const {control, formState, handleSubmit} = useForm<ForgotPasswordFormType>({
     resolver: zodResolver(forgotPasswordFormSchema),
     defaultValues: {

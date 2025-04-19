@@ -1,7 +1,6 @@
 import {Alert} from 'react-native';
 
 import {zodResolver} from '@hookform/resolvers/zod';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useForm} from 'react-hook-form';
 
 import {
@@ -11,13 +10,11 @@ import {
   FormPasswordInput,
   FormTextInput,
 } from '@components';
-import {AuthStackParamList} from '@routes';
+import {AuthScreenProps} from '@routes';
 
 import {loginFormSchema, LoginFormType} from './loginFormSchema';
 
-type ScreenProps = NativeStackScreenProps<AuthStackParamList, 'LoginScreen'>;
-
-export function LoginScreen({navigation}: ScreenProps) {
+export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
   const {control, formState, handleSubmit} = useForm<LoginFormType>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
