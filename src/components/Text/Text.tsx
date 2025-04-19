@@ -10,7 +10,7 @@ interface SRTextProps extends React.ComponentProps<typeof SRText> {}
 export interface TextProps
   extends Omit<
     SRTextProps,
-    'fontWeight' | 'fontSize' | 'fontFamily' | 'lineHeight' | 'style'
+    'fontWeight' | 'fontSize' | 'fontFamily' | 'lineHeight'
   > {
   preset?: TextVariants;
   bold?: boolean;
