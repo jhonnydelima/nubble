@@ -10,7 +10,11 @@ export function PostImage({imageURL}: Props) {
       source={{uri: imageURL}}
       resizeMode="cover"
       // eslint-disable-next-line react-native/no-inline-styles
-      style={{width: Dimensions.get('screen').width, height: 300}}
+      style={{
+        width: Dimensions.get('screen').width,
+        height: 300,
+        marginHorizontal: -24,
+      }}
     />
   );
 }
