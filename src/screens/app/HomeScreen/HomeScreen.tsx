@@ -6,6 +6,8 @@ import {Post, postService} from '@domain';
 import {PostItem, Screen} from '@components';
 import {AppBottomTabScreenProps} from '@routes';
 
+import {HomeHeader} from './components/HomeHeader';
+
 export function HomeScreen({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   navigation,
@@ -27,6 +29,7 @@ export function HomeScreen({
         keyExtractor={item => item.id}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
+        ListHeaderComponent={<HomeHeader />}
       />
     </Screen>
   );
