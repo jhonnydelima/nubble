@@ -19,10 +19,7 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
   const {bottom} = useAppSafeArea();
 
   return (
-    <Box
-      {...$boxProps}
-      style={[{paddingBottom: bottom}, $shadowProps]}
-      backgroundColor="carrotSecondary">
+    <Box {...$boxProps} style={[{paddingBottom: bottom}, $shadowProps]}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
 
