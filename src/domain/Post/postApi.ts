@@ -1,5 +1,5 @@
 import {postListMock} from './postListMock';
-import {Post} from './types';
+import {Post} from './postTypes';
 
 async function getList(): Promise<Post[]> {
   let response = await fetch('http://localhost:3333/user/post', {
