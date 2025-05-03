@@ -12,7 +12,6 @@ async function getList(): Promise<PageAPI<PostAPI>> {
   });
 
   let data: PageAPI<PostAPI> = await response.json();
-  console.log(data);
   return data;
 }
 
