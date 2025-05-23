@@ -58,7 +58,7 @@ export function usePaginatedList<Type>(
   return {
     loading,
     error,
-    dataList,
+    data: dataList,
     refresh: fetchInitialData,
     fetchNextPage,
   };
