@@ -6,7 +6,7 @@ export function PostCommentsScreen({
 }: AppScreenProps<'PostCommentsScreen'>) {
   const {postId} = route.params;
   return (
-    <Screen canGoBack>
+    <Screen canGoBack title="Comentários">
       <Box>
         <Text>Tela de comentários do Post: {postId}</Text>
       </Box>
