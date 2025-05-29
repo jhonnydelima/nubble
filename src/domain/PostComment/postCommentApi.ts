@@ -10,7 +10,7 @@ async function getList(
     '/user/post_comment',
     {
       params: {
-        postId,
+        post_id: postId,
         ...pageParams,
       },
     },
