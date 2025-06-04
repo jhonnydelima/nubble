@@ -11,11 +11,16 @@ export function PostCommentItem({postComment}: Props) {
     <Box flexDirection="row" alignItems="center" gap="s12" mb="s16">
       <ProfileAvatar imageUrl={postComment.author.profileURL} />
       <Box flex={1}>
-        <Text preset="paragraphSmall" bold>
-          {postComment.author.userName}
-        </Text>
+        <Box flexDirection="row" gap="s4">
+          <Text preset="paragraphSmall" bold>
+            {postComment.author.userName}
+          </Text>
+          <Text preset="paragraphSmall" color="gray1">
+            - {postComment.createdAtRelative}
+          </Text>
+        </Box>
         <Text preset="paragraphSmall" color="gray1">
-          {postComment.message} -
+          {postComment.message}
         </Text>
       </Box>
     </Box>
