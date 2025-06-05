@@ -9,23 +9,23 @@ function formatRelative(dateISO: string): string {
   }
   const diffInMinutes = Math.round(diffInSeconds / 60);
   if (diffInMinutes < 60) {
-    return `${diffInMinutes}min`;
+    return `${diffInMinutes} min`;
   }
   const diffInHours = Math.round(diffInMinutes / 60);
   if (diffInHours < 24) {
-    return `${diffInHours}h`;
+    return `${diffInHours} h`;
   }
   const diffInDays = Math.round(diffInHours / 24);
   if (diffInDays < 7) {
-    return `${diffInDays}d`;
+    return `${diffInDays} d`;
   }
   const diffInWeeks = Math.round(diffInDays / 7);
   if (diffInWeeks < 4) {
-    return `${diffInWeeks}sem`;
+    return `${diffInWeeks} sem`;
   }
   const diffInMonths = Math.round(diffInDays / 30);
   if (diffInMonths < 12) {
-    return `${diffInMonths}m`;
+    return `${diffInMonths} m`;
   }
   return format(date, 'dd/MM/yyyy');
 }
