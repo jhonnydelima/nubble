@@ -3,7 +3,6 @@ import {
   Pressable,
   TextInput as RNTextInput,
   TextInputProps as RNTextInputProps,
-  // TextStyle,
 } from 'react-native';
 
 import {useAppTheme} from '@hooks';
@@ -14,10 +13,6 @@ import {$textInputStyle} from '../TextInput/TextInput';
 
 export interface TextMessageProps extends RNTextInputProps {
   onPressSend: () => void;
-  // label: string;
-  // errorMessage?: string;
-  // RightComponent?: ReactElement;
-  // boxProps?: BoxProps;
 }
 
 export function TextMessage({
