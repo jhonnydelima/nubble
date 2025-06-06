@@ -2,7 +2,12 @@ import {useState} from 'react';
 
 import {postCommentService} from '@domain';
 
-export function usePostCommentCreate(postId: number) {
+interface Options {
+  onSuccess?: () => void;
+  onError?: (message: string) => void;
+}
+
+export function usePostCommentCreate(postId: number, options?: Options) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<boolean | null>(null);
 
@@ -10,9 +15,15 @@ export function usePostCommentCreate(postId: number) {
     try {
       setLoading(true);
       setError(null);
-      return postCommentService.create(postId, message);
+      await postCommentService.create(postId, message);
+      if (options?.onSuccess) {
+        options.onSuccess();
+      }
     } catch (err) {
       setError(true);
+      if (options?.onError) {
+        options.onError(`Erro ao criar comentário. ${(err as Error).message}`);
+      }
     } finally {
       setLoading(false);
     }

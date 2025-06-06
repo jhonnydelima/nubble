@@ -18,7 +18,7 @@ export type TextMessageRef = {
 };
 
 export interface TextMessageProps extends RNTextInputProps {
-  onPressSend: () => void;
+  onPressSend: (message: string) => void;
 }
 
 export const TextMessage = forwardRef<TextMessageRef, TextMessageProps>(
@@ -54,7 +54,9 @@ export const TextMessage = forwardRef<TextMessageRef, TextMessageProps>(
             style={[$textInputStyle, {color: colors.gray1}]}
             {...textMessageProps}
           />
-          <Pressable disabled={isSendDisabled} onPress={onPressSend}>
+          <Pressable
+            disabled={isSendDisabled}
+            onPress={() => onPressSend(value ?? '')}>
             <Text color={isSendDisabled ? 'gray2' : 'primary'} bold>
               Enviar
             </Text>

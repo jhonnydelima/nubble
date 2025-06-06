@@ -7,30 +7,31 @@ import {TextMessage, TextMessageRef} from '@components';
 
 interface Props {
   postId: number;
+  onAddComment: () => void;
 }
 
-export function PostCommentTextMessage({postId}: Props) {
-  const {createComment} = usePostCommentCreate(postId);
+export function PostCommentTextMessage({postId, onAddComment}: Props) {
+  const {createComment} = usePostCommentCreate(postId, {
+    onSuccess: () => {
+      clearInput();
+      Keyboard.dismiss();
+      onAddComment();
+    },
+  });
   const [message, setMessage] = useState('');
   const inputRef = useRef<TextMessageRef>(null);
 
-  async function onPressSend() {
-    const currentMessage = message;
-    if (!currentMessage.trim()) {
-      return;
-    }
+  function clearInput() {
     inputRef.current?.blur();
     inputRef.current?.clear();
     setMessage('');
-    Keyboard.dismiss();
-    await createComment(currentMessage);
   }
 
   return (
     <TextMessage
       ref={inputRef}
       placeholder="Adicione um comentário"
-      onPressSend={onPressSend}
+      onPressSend={createComment}
       value={message}
       onChangeText={setMessage}
     />
