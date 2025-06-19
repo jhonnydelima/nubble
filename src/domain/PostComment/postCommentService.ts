@@ -29,7 +29,13 @@ async function create(postId: number, message: string): Promise<PostComment> {
   return postCommentAdapter.toPostComment(apiResponse);
 }
 
+async function remove(postCommentId: number): Promise<string> {
+  const apiResponse = await postCommentApi.remove(postCommentId);
+  return apiResponse.message;
+}
+
 export const postCommentService = {
   getList,
   create,
+  remove,
 };
