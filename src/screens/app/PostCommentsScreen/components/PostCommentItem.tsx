@@ -6,10 +6,13 @@ import {Box, ProfileAvatar, Text} from '@components';
 
 interface Props {
   postComment: PostComment;
+  onRemoveComment: () => void;
 }
 
-export function PostCommentItem({postComment}: Props) {
-  const {mutate} = usePostCommentRemove();
+export function PostCommentItem({postComment, onRemoveComment}: Props) {
+  const {mutate} = usePostCommentRemove({
+    onSuccess: onRemoveComment,
+  });
 
   function handleConfirmCommentRemoval() {
     Alert.alert('Deseja excluir este comentário?', 'Pressione "Confirmar"', [
