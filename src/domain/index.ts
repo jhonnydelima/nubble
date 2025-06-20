@@ -8,6 +8,3 @@ export * from './PostComment/postCommentTypes';
 export * from './PostComment/postCommentService';
 export * from './PostComment/useCases/usePostCommentList';
 export * from './PostComment/useCases/usePostCommentCreate';
-
-// Hooks
-export * from './hooks/usePaginatedList';
