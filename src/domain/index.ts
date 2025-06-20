@@ -9,3 +9,6 @@ export * from './PostComment/postCommentService';
 export * from './PostComment/useCases/usePostCommentList';
 export * from './PostComment/useCases/usePostCommentCreate';
 export * from './PostComment/useCases/usePostCommentRemove';
+
+// Auth
+export * from './Auth/hooks/useUser';
