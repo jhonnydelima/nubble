@@ -1,5 +1,5 @@
-import {ToastService, useToastContext} from '@services';
+import {ToastService, useToastZustand} from '@services';
 
 export function useToast(): ToastService {
-  return useToastContext();
+  return useToastZustand();
 }
