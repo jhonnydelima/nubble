@@ -4,7 +4,7 @@ interface ToastProps {
   message: string;
   duration?: number; // Duration in milliseconds
   type?: 'success' | 'error';
-  action: {
+  action?: {
     title: string;
     onPress: () => void;
   };
