@@ -24,7 +24,7 @@ export function PostCommentItem({
       onRemoveComment();
       showToast({
         message: 'Comentário deletado',
-        duration: 5000,
+        duration: 3000,
       });
     },
   });
