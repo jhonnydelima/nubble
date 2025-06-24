@@ -1,8 +1,11 @@
+export type ToastType = 'success' | 'error';
+export type ToastPosition = 'top' | 'bottom';
+
 export interface ToastProps {
   message: string;
   duration?: number; // Duration in milliseconds
-  type?: 'success' | 'error';
-  position?: 'top' | 'bottom';
+  type?: ToastType;
+  position?: ToastPosition;
   action?: {
     title: string;
     onPress: () => void;
