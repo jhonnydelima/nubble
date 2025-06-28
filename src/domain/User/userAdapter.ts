@@ -13,7 +13,7 @@ function toUser(userAPI: UserAPI): User {
     lastName: userAPI.last_name,
     username: userAPI.username,
     email: userAPI.email,
-    profileURL: userAPI.profile_url,
+    profileUrl: userAPI.profile_url,
     isOnline: userAPI.is_online,
     fullName: userAPI.full_name,
   };

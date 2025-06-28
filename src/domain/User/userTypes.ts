@@ -4,7 +4,7 @@ export interface User {
   lastName: string;
   username: string;
   email: string;
-  profileURL: string;
+  profileUrl: string;
   isOnline: boolean;
   fullName: string;
 }
